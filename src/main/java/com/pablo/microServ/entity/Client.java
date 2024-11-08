@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Cliente {
+public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,7 +23,7 @@ public class Cliente {
     private LocalDate birthDate;
 
 
-    public LocalDate getFechaProbableMuerte() {
+    public LocalDate getEstimatedDateOfDeath() {
         return birthDate.plusYears(90);
     }
 }
